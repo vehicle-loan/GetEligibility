@@ -1,0 +1,73 @@
+    <!--%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+        pageEncoding="ISO-8859-1"%-->
+    <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+    <html>
+    <head>
+    <meta charset="ISO-8859-1">
+    <link rel="stylesheet" type="text/css" href="eligibility-style.css"/>
+    <title>Insert title here</title>
+    </head>
+    <body>
+        <div class="forms">
+    <form method="post">
+        <div class="title">Get Eligibility Criteria</div>
+            <div >
+                Age:<input type="text" name="age" placeholder="Age">
+            </div>
+            <div >
+                Tenure:<input type="text" name="tenure" placeholder="Tenure"/>
+        
+
+        <div >
+            Yearly Salary:
+            <input type="text" name="salary" placeholder="Yearly-Salary"/>
+        </div>
+
+        <div>
+            Principal Amount:
+                <input type="text" name="principalAmount" id="principalamount"placeholder="PrincipalAmount"/>
+        </div>
+            
+        <div >
+            Previous Loan EMI:
+                <input type="text" name="previousLoanEMI" placeholder="PreviousLoanEMI"/>
+        </div>
+
+        <div>
+            Rate of Interest:
+                <input type="text" name="rateOfInterest" placeholder="RateOfInterest"/>
+        </div>
+            
+        <div>
+            Marital Status:
+                <div  style="display:inline-block;width:100%;"><span style="width: 50%;float:left;">Single </span><span style="width: 50%;float:left;"><input type="radio" name="maritalStatus"  value="single"  checked/></span></div>
+                <div style="display:inline-block;width:100%;"><span style="width: 50%;float:left;">Married</span><span style="width: 50%;float:left;"><input type="radio" name="maritalStatus"value="married" /></span></div>
+    
+        </div>
+
+        <div>
+            Type of Employment:
+                <div style="display:inline-block;width:100%;"><span style="width: 50%;float:left;">Salaried</span><span style="width: 50%;float:left;"><input type="radio" name="typeOfEmployment"value="salaried" checked/></span></div>
+                <div style="display:inline-block;width:100%;"><span style="width: 50%;float:left;">Self-Employed</span><span style="width: 50%;float:left;"><input type="radio" name="typeOfEmployment"value="self-employed"></span></div>
+        </div>
+
+        <div class="text-center">
+            <button type="button" onclick=" return validate()">SUBMIT</button>
+        </div > 
+    </form>
+</div>
+
+<script ="text/javascript">
+    function validate()
+    {
+        
+        var uprincipalamount=document.getElementById('principalamount').value;
+        if(uprincipalamount.length<8 ||uprincipalamount.length>8)
+        alert("Principal amount will always have 8 digits");
+    return false;
+    }
+
+</script>
+
+</body>
+</html>
